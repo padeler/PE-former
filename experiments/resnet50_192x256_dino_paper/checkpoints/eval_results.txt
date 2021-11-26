@@ -1,0 +1,10 @@
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets= 20 ] = 0.610
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets= 20 ] = 0.863
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets= 20 ] = 0.687
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets= 20 ] = 0.587
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets= 20 ] = 0.651
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 20 ] = 0.701
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | maxDets= 20 ] = 0.917
+ Average Recall     (AR) @[ IoU=0.75      | area=   all | maxDets= 20 ] = 0.776
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets= 20 ] = 0.656
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets= 20 ] = 0.765
