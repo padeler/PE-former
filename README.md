@@ -9,13 +9,9 @@ You can use the code in this repository to train and evaluate different POTR con
 The code in this repository is based on the following:
 
 - [End-to-End Object Detection with Transformers (DETR)](https://github.com/facebookresearch/detr)
-Xcit
 - [Cross-Covariance Image Transformer (XCiT)](https://github.com/facebookresearch/xcit)
-
 - [DeiT: Data-efficient Image Transformers](https://github.com/facebookresearch/deit)
-
 - [Simple Baselines for Human Pose Estimation and Tracking](https://github.com/microsoft/human-pose-estimation.pytorch)
-
 - [Pytoch image models (TIMM)](https://github.com/rwightman/pytorch-image-models)
 
 
@@ -23,7 +19,7 @@ Thank you!
 
 ## Preparing
 
-Create a python venv and install all the dependenciesQ
+Create a python venv and install all the dependencies:
 
 ```bash
 python -m venv pyenv
