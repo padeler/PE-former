@@ -5,6 +5,22 @@ POTR is a pure transformer architecture (no CNN backbone) for 2D body pose estim
 
 You can use the code in this repository to train and evaluate different POTR configurations on the COCO dataset.
 
+## Model
+
+POTR is based on building blocks derived from recent SOTA models. As shown in the figure there are two major components: A Visual Transformer encoder, and a Transformer decoder.
+
+![model](/figures/model_draft1.jpg)
+
+The input image is initially converted into tokens following the ViT paradigm. A position embedding is used to help retain the patch-location information. The tokens and the position embedding are used as input to transformer encoder. The transformed tokens are used as the memory input of the transformer decoder.
+The inputs of the decoder are _M_ learned queries.
+For each query the network will produce a joint prediction.
+The output tokens from the transformer decoder are passed through two heads (FFNs). 
+ - The first is a classification head used to predict the joint type (i.e class) of each query.
+ - The second is a regression head that predicts the normalized coordinates (in the range $[0,1]$) of the joint in the input image.
+
+Predictions that do not correspond to joints are mapped to a "no object" class.
+
+
 ## Acknowledgements
 The code in this repository is based on the following:
 
@@ -13,7 +29,6 @@ The code in this repository is based on the following:
 - [DeiT: Data-efficient Image Transformers](https://github.com/facebookresearch/deit)
 - [Simple Baselines for Human Pose Estimation and Tracking](https://github.com/microsoft/human-pose-estimation.pytorch)
 - [Pytoch image models (TIMM)](https://github.com/rwightman/pytorch-image-models)
-
 
 Thank you!
 
@@ -28,8 +43,10 @@ pip install -r requirements.txt
 ```
 
 ## Training 
+Here are some CLI examples using the ```lit_main.py```
+script.
 
-Training POTR with a __deit_small__ encoder, patch size of __16x16__ pixels and input resolution __192x256__:
+Training POTR with a deit_small encoder, patch size of $16x16$ pixels and input resolution $192x256$:
 
 ```bash
 python lit_main.py --vit_arch deit_deit_small --patch_size 16 --batch_size 42 --input_size 192 256 --hidden_dim 384 --vit_dim 384 --gpus 1 --num_workers 24
@@ -53,7 +70,6 @@ Baseline that uses a resnet50 (pretrained with dino) as an encoder:
 ```bash
  python lit_main.py --vit_arch resnet50 --patch_size 16 --batch_size 42 --input_size 192 256 --hidden_dim 384 --vit_dim 384 --gpus 1 --num_workers 24 --vit_weights https://dl.fbaipublicfiles.com/dino/dino_resnet50_pretrain/dino_resnet50_pretrain.pth --position_embedding learned_nocls
  ```
-
 
 Check the ```lit_main.py``` cli arguments for a complete list.
 ```bash
