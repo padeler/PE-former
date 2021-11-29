@@ -16,7 +16,7 @@ The inputs of the decoder are _M_ learned queries.
 For each query the network will produce a joint prediction.
 The output tokens from the transformer decoder are passed through two heads (FFNs). 
  - The first is a classification head used to predict the joint type (i.e class) of each query.
- - The second is a regression head that predicts the normalized coordinates (in the range $[0,1]$) of the joint in the input image.
+ - The second is a regression head that predicts the normalized coordinates (in the range [0,1]) of the joint in the input image.
 
 Predictions that do not correspond to joints are mapped to a "no object" class.
 
@@ -46,7 +46,7 @@ pip install -r requirements.txt
 Here are some CLI examples using the ```lit_main.py```
 script.
 
-Training POTR with a deit_small encoder, patch size of $16x16$ pixels and input resolution $192x256$:
+Training POTR with a deit_small encoder, patch size of 16x16 pixels and input resolution 192x256:
 
 ```bash
 python lit_main.py --vit_arch deit_deit_small --patch_size 16 --batch_size 42 --input_size 192 256 --hidden_dim 384 --vit_dim 384 --gpus 1 --num_workers 24
@@ -95,14 +95,25 @@ Evaluate POTR with a deit_small encoder:
 Set the argument of --init_weights to your model's checkpoint.
 
 
-## Experiments and trained models
+## Model Zoo
+
+|name                | input   | params| AP   | AR   | url     |
+| ---                | ---     | ---   | ---  | ---  | ---     |
+| POTR-Deit-dino-p8  | 192x256 | 36.4M | 70.6 | 78.1 | [model](https://drive.google.com/file/d/1WaycMXmGxqNJngPnItDux83e1wGPxGsG/view?usp=sharing) |
+| POTR-Xcit-p16      | 288x384 | 40.6M | 70.2 | 77.4 | [model](https://drive.google.com/file/d/1UZtYrdNdzCBSERExkzgt_f_q-Asyq7FM/view?usp=sharing) |
+| POTR-Xcit-dino-p16 | 288x384 | 40.6M | 70.7 | 77.9 | [model](https://drive.google.com/file/d/1ArLTovtHIPJWIits3D2TRI2iZwta4DLZ/view?usp=sharing) | 
+| POTR-Xcit-dino-p8  | 192x256 | 40.5M | 71.6 | 78.7 | [model](https://drive.google.com/file/d/1f4wdR-YDXXz3UrxrscsKsxg0EIR43NUR/view?usp=sharing) | 
+| POTR-Xcit-dino-p8  | 288x384 | 40.5M | 72.6 | 79.4 | [model](https://drive.google.com/drive/folders/1LFszPEva0QmWTPqqSbxMmB_GqNhjm5kq?usp=sharing) 
+   
+
 
 Check the [experiments](/experiments) folder for configuration files and evaluation results.
 
-Trained models and tensorboard training logs can be downloaded from this [drive folder](https://drive.google.com/drive/folders/1LFszPEva0QmWTPqqSbxMmB_GqNhjm5kq?usp=sharing).
+All trained models and tensorboard training logs can be downloaded from this [drive folder](https://drive.google.com/drive/folders/1LFszPEva0QmWTPqqSbxMmB_GqNhjm5kq?usp=sharing).
 
 
 
 
 
-
+# License
+This repository is released under the Apache 2.0 license as found in the [LICENSE](LICENSE) file.
