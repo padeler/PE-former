@@ -103,7 +103,7 @@ Set the argument of --init_weights to your model's checkpoint.
 | POTR-Xcit-p16      | 288x384 | 40.6M | 70.2 | 77.4 | [model](https://drive.google.com/file/d/1UZtYrdNdzCBSERExkzgt_f_q-Asyq7FM/view?usp=sharing) |
 | POTR-Xcit-dino-p16 | 288x384 | 40.6M | 70.7 | 77.9 | [model](https://drive.google.com/file/d/1ArLTovtHIPJWIits3D2TRI2iZwta4DLZ/view?usp=sharing) | 
 | POTR-Xcit-dino-p8  | 192x256 | 40.5M | 71.6 | 78.7 | [model](https://drive.google.com/file/d/1f4wdR-YDXXz3UrxrscsKsxg0EIR43NUR/view?usp=sharing) | 
-| POTR-Xcit-dino-p8  | 288x384 | 40.5M | 72.6 | 79.4 | [model](https://drive.google.com/drive/folders/1LFszPEva0QmWTPqqSbxMmB_GqNhjm5kq?usp=sharing) 
+| POTR-Xcit-dino-p8  | 288x384 | 40.5M | 72.6 | 79.4 | [model](https://drive.google.com/file/d/1NQCyhJr-uagO4Y0fiqKv4pm9LzxPb-HD/view?usp=sharing) 
    
 
 
