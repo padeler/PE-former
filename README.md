@@ -1,4 +1,4 @@
-# POTR: Pose estimation transformer
+# PE-former: Pose Estimation Transformer
 Vision transformer architectures perform very well for image classification tasks. Efforts to solve more challenging vision tasks with transformers rely on convolutional backbones for feature extraction.
 
 POTR is a pure transformer architecture (no CNN backbone) for 2D body pose estimation. It uses an encoder-decoder architecture with a vision transformer as an encoder and a transformer decoder (derived from DETR).
