@@ -115,5 +115,21 @@ All trained models and tensorboard training logs can be downloaded from this [dr
 
 
 
-# License
+## License
 This repository is released under the Apache 2.0 license as found in the [LICENSE](LICENSE) file.
+
+
+
+
+## Citation
+If you find this repository useful, please consider citing our work:
+```
+@misc{panteleris2021peformer,
+      title={PE-former: Pose Estimation Transformer}, 
+      author={Paschalis Panteleris and Antonis Argyros},
+      year={2021},
+      eprint={2112.04981},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
